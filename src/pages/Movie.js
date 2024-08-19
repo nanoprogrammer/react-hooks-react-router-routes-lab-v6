@@ -1,16 +1,29 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import NavBar from "../components/NavBar";
 
 function Movie() {
+  const movie = {
+    title: "Doctor Strange",
+    time: 115,
+    genres: ["Action", "Adventure", "Fantasy"],
+  };
+
   return (
     <>
+      <NavBar />
       <header>
-        {/* What component should go here? */}
+        <h1>{movie.title}</h1>
       </header>
       <main>
-        {/* Movie info here! */}
+        <p>{movie.time} minutes</p>
+        <div>
+          {movie.genres.map((genre) => (
+            <span key={genre}>{genre}</span>
+          ))}
+        </div>
       </main>
     </>
   );
-};
+}
 
 export default Movie;

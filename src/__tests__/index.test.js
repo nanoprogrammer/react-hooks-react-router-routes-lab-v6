@@ -4,7 +4,6 @@ import { render, screen } from "@testing-library/react";
 import routes from "../routes.js";
 
 
-
 test('renders the Home component on route "/"', () => {
   const router = createMemoryRouter(routes)
   render(
